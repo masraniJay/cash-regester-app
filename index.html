@@ -2,43 +2,39 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Cash Regester App</title>
-    <link href="styles.css" rel="stylesheet" />
-    <script src="app.js" type="text/javascript"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles.css">
+    <title>Cash Register</title>
 </head>
 
 <body>
-    <main>
-        <h1>Cash Regester Manager</h1>
-
-        <p>Enter the bill amount and cash given by the customer to know minimum number of notes to return.</p>
-
+    <div class="container">
+        <h1 class="heading">CASH REGISTER</h1>
+        <p class="description">Enter the bill amount and cash given by the customer to know minimum number of notes to
+            return.</p>
         <label class="input-label" for="bill-amount">Bill Amount:</label>
-        <input class="input" id="bill-amount" type="text" />
-        
+        <input class="input" type="number" min="1" id="bill-amount">
+        <div class="next-container">
         <label class="input-label" for="cash-given">Cash Given:</label>
-        <input class="input" id="cash-given" type="text" />
-
-        <div><button id="check-button">Check</button></div>
-
-        <p id="error-message"></p>
-
-        <table>
-            <caption>Return Change</caption>
+        <input class="input" type="number" min="1" id="cash-given">
+        <button class="btn-check">Check</button>
+        <div class="result"></div>
+        <table class="return-change">
+            <caption class="caption">Notes To Be Returned:</caption>
             <tr>
-                <th>No of notes</th>
+                <th>Number of notes</th>
                 <td class="no-of-notes"></td>
                 <td class="no-of-notes"></td>
                 <td class="no-of-notes"></td>
                 <td class="no-of-notes"></td>
                 <td class="no-of-notes"></td>
                 <td class="no-of-notes"></td>
-                <td class="no-of-notes"></td> 
+                <td class="no-of-notes"></td>
             </tr>
             <tr>
-                <th></th>
+                <th>Available Notes</th>
                 <td>2000</td>
                 <td>500</td>
                 <td>100</td>
@@ -47,8 +43,16 @@
                 <td>5</td>
                 <td>1</td>
             </tr>
-        </table>
-    </main>
-</body>
 
+        </table>
+</div>
+</div>
+<hr>
+<footer class="footer">
+    <h2 class="footer-header">about</h2>
+    <p>Enter the bill amount and cash given by the customer to know minimum number of notes to
+        return.</p>
+</footer>  
+<script src="/app.js"></script>
+</body>
 </html>
